@@ -1,4 +1,5 @@
 import Button from "../../components/Button"
+import Dialog from "../../components/Dialog"
 import Personal from "../../components/Personal"
 
 
@@ -11,7 +12,7 @@ rename properties
 
 Notes: khi nội suy 1 function component react in jsx
 - must have: <... />
-- must write Pascal Case
+- must write PascalCase
 */
 
 function Typography() {
@@ -27,10 +28,11 @@ function Props() {
   }
 
   return (
-    <div>
+    <div key={1}>
       <h1>Props</h1>
 
       <Personal 
+        key={2}
         firstName="tony" // string
         age={18} // number 
         isLoading
@@ -58,6 +60,20 @@ function Props() {
         onBlur={() => {}}
         tabIndex={1}
       />
+
+      <Dialog 
+        title="Delete"
+      >
+        Are you sure delete item?. Can not undo when you
+      </Dialog>
+
+
+      <Dialog 
+        title="Edit Profile"
+      >
+        <label>First Name</label>
+        <input type="text" />
+      </Dialog>
     </div>
   )
 }
