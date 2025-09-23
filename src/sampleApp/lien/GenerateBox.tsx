@@ -5,7 +5,7 @@ function GenerateBox() {
     <div>
       <h1>GenerateBox</h1>
 
-      // code something
+      // code something dsadasdas
     </div>
   )
 }
