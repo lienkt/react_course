@@ -44,3 +44,4 @@ Scenario: task A
 4. $git pull --rebase origin main
 5. fix conflict -> git add . -> git rebase --continue
 6. git push -f
+5. create MR/PR of fc-taskB merge into development
