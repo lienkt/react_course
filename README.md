@@ -30,3 +30,10 @@ Scenario: task A
 6. $git push
 7. create 1 MR(merge request)/PR(pull request) on github merge to development and qc branch
 8. wait member review and merge 
+## How to fix conflict
+### fix conflict when merge taskB into development branch
+1. $git checkout taskB
+2. $git checkout -b fc-taskB
+3. $git merge --no-ff development
+4. fix conflict 
+5. create MR/PR of fc-taskB merge into development
