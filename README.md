@@ -37,3 +37,10 @@ Scenario: task A
 3. $git merge --no-ff development
 4. fix conflict 
 5. create MR/PR of fc-taskB merge into development
+### fix conflict when merge taskB into main branch
+1. $git checkout main
+2. $git pull - make sure get latest code of main
+3. $git checkout taskB
+4. $git pull --rebase origin main
+5. fix conflict -> git add . -> git rebase --continue
+6. git push -f
