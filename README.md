@@ -19,3 +19,14 @@
 - parent component render -> child component render
 - key changes (force update)
   - integrate with component 3rd libs
+
+## step to step when do task with git workflow
+Scenario: task A
+1. $git checkout main
+2. $git pull
+3. $git checkout -b taskA
+4. $git add .
+5. $git commit -m "xxxx"
+6. $git push
+7. create 1 MR(merge request)/PR(pull request) on github merge to development and qc branch
+8. wait member review and merge 
