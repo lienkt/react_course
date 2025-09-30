@@ -19,3 +19,11 @@
 - parent component render -> child component render
 - key changes (force update)
   - integrate with component 3rd libs
+
+## How to fix conflict
+### fix conflict when merge taskB into development branch
+1. $git checkout taskB
+2. $git checkout -b fc-taskB
+3. $git merge --no-ff development
+4. fix conflict 
+5. create MR/PR of fc-taskB merge into development
