@@ -6,6 +6,10 @@ import Props from "./pages/fundamental/Props"
 import State from "./pages/fundamental/State"
 import CSS from "./pages/fundamental/CSS"
 import GenerateBox from "./sampleApp/lien/GenerateBox"
+import LiftingStateUp from "./pages/fundamental/LiftingStateUp"
+import Form from "./pages/fundamental/Form"
+import StateHook from "./pages/fundamental/StateHook"
+import EffectHook from "./pages/fundamental/EffectHook"
 
 function App() {
 
@@ -34,6 +38,18 @@ function App() {
 
       <br />
       <GenerateBox />
+
+      <br />
+      <LiftingStateUp />
+
+      <br />
+      <Form />
+
+      <br />
+      <StateHook />
+
+      <br />
+      <EffectHook />
   
 
       <br />
