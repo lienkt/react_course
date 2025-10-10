@@ -13,6 +13,7 @@ const ButtonStyled = styled.button<any>`
 function Button({ 
   buttonText = 'Default Button', 
   variant = 'default',
+  
   ...restProps
 }: ButtonProps) {
   return (
