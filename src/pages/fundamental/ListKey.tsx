@@ -1,6 +1,7 @@
 import React from "react"
 
 function ListKey() {
+  const [timestamp, setTimestamp] = React.useState(Date.now());
   const [todos, setTodos] = React.useState([
     { title: 'react' },
     { title: 'angular' }
@@ -9,8 +10,10 @@ function ListKey() {
   const todosFilerted = todos.map((item, index) => {
     const newItem = {
       ...item,
-      id: item.title + index
+      id: item.title + index,
+      // id: Math.floor(Math.random() * 12)
     }
+    console.log('newItem: ', newItem)
     return (
       <div key={newItem.id}>
         Title: {newItem.title}
@@ -18,12 +21,14 @@ function ListKey() {
     )
   })
 
-  console.log("todosFilerted: ", todosFilerted  )
+  // console.log("todosFilerted: ", todosFilerted  )
 
   return (
     <div>
       <h1>ListKey</h1>
-       Map: {todosFilerted}
+       Map: {todosFilerted} 
+       <br />
+       <button type="button" onClick={() => setTimestamp(Date.now())}>Update timestamp</button>
     </div>
   )
 }
