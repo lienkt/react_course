@@ -6,6 +6,7 @@ import Props from "./pages/fundamental/Props"
 import State from "./pages/fundamental/State"
 import CSS from "./pages/fundamental/CSS"
 import GenerateBox from "./sampleApp/lien/GenerateBox"
+import ColorBox from "./sampleApp/lien/ColorBox"
 
 function App() {
 
@@ -36,6 +37,8 @@ function App() {
       <GenerateBox />
   
 
+      <br />
+      <ColorBox />
       <br />
       <br />
       <br />
