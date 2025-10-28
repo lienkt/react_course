@@ -24,3 +24,24 @@ button {
 input {
   border: 1px solid #000;
 }
+
+.boxRenderingPath {
+  width: 200px;
+  height: 200px;
+  transition: all .3s;
+}
+
+.box1 {
+  background-color: #F00;
+  /* display: block; */
+  /* opacity: 1; */
+}
+
+.box1:hover {
+  /* display: none; */
+  /* opacity: 0; */
+}
+
+.box2 {
+  background-color:aquamarine;
+}

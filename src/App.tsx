@@ -11,6 +11,9 @@ import LiftingStateUp from "./pages/fundamental/LiftingStateUp"
 import Form from "./pages/fundamental/Form"
 import StateHook from "./pages/fundamental/StateHook"
 import EffectHook from "./pages/fundamental/EffectHook"
+import RenderingPath from "./pages/fundamental/RenderingPath"
+import MovieFilm from "./pages/fundamental/MovieFilm"
+import { MovieProvider } from "./contexts/MovieContext"
 
 function App() {
 
@@ -33,28 +36,39 @@ function App() {
 
       <br />
       <ListKey />
-
+      
       <br />
       <CSS />
-
-      <br />
-      <GenerateBox />
-
+    
       <br />
       <LiftingStateUp />
 
       <br />
       <Form />
 
-      <br />
-      <StateHook />
+      <MovieProvider>
+        <br />
+        <StateHook />
 
-      <br />
-      <EffectHook />
+        <br />
+        <EffectHook />
+    
+
+        <br />
+        <ColorBox />
+
+        <br />
+        <GenerateBox />
+
   
+        <br />
+        <RenderingPath />
 
-      <br />
-      <ColorBox />
+        <br />
+      
+        <MovieFilm />
+      </MovieProvider>
+
       <br />
       <br />
       <br />

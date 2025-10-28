@@ -29,8 +29,8 @@ function ColorBox() {
 
       <div className="grid grid-cols-2 gap-6">
         {boxesData.map((box) => {
-          const bgClass =
-            activeColor !== null && activeColor !== undefined ? activeColor : box.originalClass;
+          const bgClass = activeColor || box.originalClass;
+            // activeColor !== null && activeColor !== undefined ? activeColor : box.originalClass;
 
           return (
             <div
