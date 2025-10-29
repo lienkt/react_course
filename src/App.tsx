@@ -14,6 +14,7 @@ import EffectHook from "./pages/fundamental/EffectHook"
 import RenderingPath from "./pages/fundamental/RenderingPath"
 import MovieFilm from "./pages/fundamental/MovieFilm"
 import { MovieProvider } from "./contexts/MovieContext"
+import RefHook from "./pages/fundamental/RefHook"
 
 function App() {
 
@@ -68,6 +69,9 @@ function App() {
       
         <MovieFilm />
       </MovieProvider>
+
+      <br />
+      <RefHook />
 
       <br />
       <br />
