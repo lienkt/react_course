@@ -57,3 +57,14 @@ Scenario: task A
 5. fix conflict -> git add . -> git rebase --continue
 6. git push -f
 7. create MR/PR of fc-taskB merge into development
+
+# Optimize performance web
+## google lighthouse
+- FCP - first contentful
+- LCP - largest contentful
+- CLS - cumulative layout shift
+
+## optimize performance react
+- prevent component render unnecessary
+- lazy load component
+- code splitting

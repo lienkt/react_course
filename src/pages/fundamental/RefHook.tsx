@@ -1,4 +1,5 @@
 import React from 'react'
+import { useScreenWidth } from '../../hooks/useScreenWidth';
 
 /*
 - way to access react element
@@ -33,6 +34,8 @@ const ShowModal = ({ ref }: any) => {
 }
 
 function RefHook() {
+  const { isScreenWidth } = useScreenWidth();
+  
   const [timeStamp, setTimestamp] = React.useState(Date.now());
   let countRef = React.useRef(0);
   const showModalRef = React.useRef<any>(null);
@@ -66,6 +69,8 @@ function RefHook() {
   })
   console.log('RefHookRefHookRefHookRefHook')
 
+ 
+
   return (
     <div>
       <h1>RefHook</h1>
@@ -74,7 +79,8 @@ function RefHook() {
       <ShowModal ref={showModalRef} /> <br />
       <button onClick={controlModal}>Show Modal</button>
       <button type="button" onClick={onSubmit}>Submit</button> <br />
-
+      <br />
+       This is viewport is: {isScreenWidth ? 'PC' : 'Mobile'}
     </div>
   )
 }

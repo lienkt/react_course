@@ -15,6 +15,7 @@ import RenderingPath from "./pages/fundamental/RenderingPath"
 import MovieFilm from "./pages/fundamental/MovieFilm"
 import { MovieProvider } from "./contexts/MovieContext"
 import RefHook from "./pages/fundamental/RefHook"
+import PerformanceHook from "./pages/fundamental/PerformanceHook"
 
 function App() {
 
@@ -72,6 +73,9 @@ function App() {
 
       <br />
       <RefHook />
+
+      <br />
+      <PerformanceHook />
 
       <br />
       <br />
