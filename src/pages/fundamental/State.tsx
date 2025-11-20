@@ -1,4 +1,6 @@
 import React from "react"
+import { useSelector } from "react-redux";
+import type { RootState } from "../../types/state.type";
 
 /*
 first render -> component render UI with initialize state
@@ -6,6 +8,8 @@ re-render (next render) -> component render UI with new state
 */
 
 function State() {
+  const theme = useSelector((state: RootState) => state.app.theme);
+
   const [count, setCount] = React.useState(1);
   const [message, setMessage] = React.useState({
     text: 'tony',
@@ -37,7 +41,8 @@ function State() {
   // UI
   return (
     <div>
-      <h1>State</h1>
+      <h1>State</h1> <br />
+      Theme: {theme} <br />
 
       Count: {count}<br />
       Message Text: {message.text} <br />

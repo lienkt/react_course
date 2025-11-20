@@ -4,9 +4,13 @@ import { createRoot } from 'react-dom/client'
 import './styles/button.css'
 import './styles/index.css'
 import App from './App.tsx'
+import { Provider } from 'react-redux'
+import store from './store.ts'
 
 createRoot(document.getElementById('root')!).render(
-  // <StrictMode>
+  //  <StrictMode>
+  <Provider store={store}>
     <App />
-  // </StrictMode>,
+  </Provider>
+  // </StrictMode> 
 )
