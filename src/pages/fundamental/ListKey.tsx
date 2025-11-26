@@ -1,8 +1,8 @@
 import React from "react"
 
 function ListKey() {
-  const [timestamp, setTimestamp] = React.useState(Date.now());
-  const [todos, setTodos] = React.useState([
+  const [, setTimestamp] = React.useState(Date.now());
+  const [todos] = React.useState([
     { title: 'react' },
     { title: 'angular' }
   ]);

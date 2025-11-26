@@ -1,4 +1,3 @@
-import React from 'react'
 import { useMovieContext } from '../../../contexts/MovieContext'
 
 function MovieList() {

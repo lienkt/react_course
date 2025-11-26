@@ -82,7 +82,6 @@ function PerformanceHook() {
         title="Demo memo hook"
         description='Demo'
         book={book}
-        updateBook={updateBook}
       />
       <br />
       This is viewport is: {isScreenWidth ? 'PC' : 'Mobile'}

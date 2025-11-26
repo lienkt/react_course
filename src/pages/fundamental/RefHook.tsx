@@ -36,7 +36,7 @@ const ShowModal = ({ ref }: any) => {
 function RefHook() {
   const { isScreenWidth } = useScreenWidth();
   
-  const [timeStamp, setTimestamp] = React.useState(Date.now());
+  const [, setTimestamp] = React.useState(Date.now());
   let countRef = React.useRef(0);
   const showModalRef = React.useRef<any>(null);
   const isSkipFirstRender = React.useRef(true);

@@ -9,10 +9,9 @@ interface CardProps {
   title: string,
   description: string,
   book: Book,
-  updateBook: () => void
 }
 
-function Card({ title, description, book, updateBook}: CardProps) {
+function Card({ title, description, book}: CardProps) {
   console.log('Card render---------', book)
   return (
     <div>

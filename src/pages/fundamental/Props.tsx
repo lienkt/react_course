@@ -54,11 +54,8 @@ function Props() {
       Demo: rest + spread operator 
       <Button 
         buttonText="Submit"
-        className="abc"
         onClick={() => {}}
         type="button"
-        onBlur={() => {}}
-        tabIndex={1}
       />
 
       <Dialog 
