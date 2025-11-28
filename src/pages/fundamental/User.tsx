@@ -11,6 +11,7 @@ function User() {
       <div>
         <button type="button" onClick={() => navigate('information')}>Information</button>
         <button type="button" onClick={() => navigate('bank')}>Setting bank</button>
+        <button type="button" onClick={() => navigate('member')}>Member</button>
       </div>
 
       <div>

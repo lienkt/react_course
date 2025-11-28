@@ -24,6 +24,8 @@ import Login from "./pages/fundamental/Login"
 import User from "./pages/fundamental/User"
 import InformationUser from "./components/InformationUser"
 import BankUser from "./components/BankUser"
+import Member from "./components/Member"
+import MemberDetail from "./components/MemberDetail"
 function App() {
   const location = useLocation();
 
@@ -140,7 +142,9 @@ function App() {
           <Route path="user" element={<User />}>
             <Route path="information" element={<InformationUser />} />
             <Route path="bank" element={<BankUser />} />
+            <Route path="member" element={<Member />} />
           </Route>
+          <Route path="user/member/:memberId" element={<MemberDetail />} />
         </Routes>
       </main>
 
