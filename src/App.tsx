@@ -26,6 +26,8 @@ import InformationUser from "./components/InformationUser"
 import BankUser from "./components/BankUser"
 import Member from "./components/Member"
 import MemberDetail from "./components/MemberDetail"
+import AuthRoute from "./routes/AuthRoute"
+import GuestRoute from "./routes/GuestRoute"
 function App() {
   const location = useLocation();
 
@@ -138,8 +140,8 @@ function App() {
           <Route path="props" element={<Props />} />
           <Route path="state" element={<State />} />
           <Route path="event" element={<EventFunction />} />
-          <Route path="login" element={<Login />} />
-          <Route path="user" element={<User />}>
+          <Route path="login" element={<GuestRoute><Login /></GuestRoute>} />
+          <Route path="user" element={<AuthRoute><User /></AuthRoute>}>
             <Route path="information" element={<InformationUser />} />
             <Route path="bank" element={<BankUser />} />
             <Route path="member" element={<Member />} />

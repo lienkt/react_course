@@ -68,3 +68,8 @@ Scenario: task A
 - prevent component render unnecessary
 - lazy load component
 - code splitting
+
+## react router
+- useParams
+- useSearchParams
+- useNavigate

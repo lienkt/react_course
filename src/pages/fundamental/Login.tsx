@@ -6,6 +6,7 @@ function Login() {
 
   function onSubmit(e: React.ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
+    window.localStorage.setItem('access_token', 'dasdsadas')
 
     navigate('/jsx');
   }
