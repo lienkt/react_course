@@ -28,6 +28,8 @@ import Member from "./components/Member"
 import MemberDetail from "./components/MemberDetail"
 import AuthRoute from "./routes/AuthRoute"
 import GuestRoute from "./routes/GuestRoute"
+import Invoice from "./sampleApp/lien/pages/Invoice"
+import InvoiceDetail from "./sampleApp/lien/pages/InvoiceDetail"
 function App() {
   const location = useLocation();
 
@@ -122,6 +124,14 @@ function App() {
               </li>
               <li>
                 <Link
+                  to="/invoice"
+                  className="block py-2 px-3 text-black bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                >
+                  Invoice
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/login"
                   className="block py-2 px-3 text-black bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
                 >
@@ -147,6 +157,10 @@ function App() {
             <Route path="member" element={<Member />} />
           </Route>
           <Route path="user/member/:memberId" element={<MemberDetail />} />
+          <Route path="invoice" element={<Invoice />}>
+            <Route index element={<div>Select an invoice</div>} />
+            <Route path=":invoiceId" element={<InvoiceDetail />} />
+          </Route>
         </Routes>
       </main>
 
@@ -181,7 +195,7 @@ function App() {
 
         <br />
         <GenerateBox />
-
+  
   
         <br />
         <RenderingPath />
