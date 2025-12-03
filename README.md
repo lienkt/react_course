@@ -66,7 +66,7 @@ Scenario: task A
 
 ## optimize performance react
 - prevent component render unnecessary
-- lazy load component
+- lazy load component/module
 - code splitting
 
 ## react router

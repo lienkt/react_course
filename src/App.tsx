@@ -1,11 +1,12 @@
 
 import { Link, NavLink, Route, Routes, useLocation } from "react-router"
+import React from "react"
 
 import ConditionalRendering from "./pages/fundamental/ConditionalRendering"
 import EventFunction from "./pages/fundamental/EventFunction"
-import JSX from "./pages/fundamental/JSX"
+// import JSX from "./pages/fundamental/JSX"
 import ListKey from "./pages/fundamental/ListKey"
-import Props from "./pages/fundamental/Props"
+// import Props from "./pages/fundamental/Props"
 import State from "./pages/fundamental/State"
 import CSS from "./pages/fundamental/CSS"
 import GenerateBox from "./sampleApp/lien/GenerateBox"
@@ -19,7 +20,6 @@ import MovieFilm from "./pages/fundamental/MovieFilm"
 import { MovieProvider } from "./contexts/MovieContext"
 import RefHook from "./pages/fundamental/RefHook"
 import PerformanceHook from "./pages/fundamental/PerformanceHook"
-import React from "react"
 import Login from "./pages/fundamental/Login"
 import User from "./pages/fundamental/User"
 import InformationUser from "./components/InformationUser"
@@ -28,6 +28,13 @@ import Member from "./components/Member"
 import MemberDetail from "./components/MemberDetail"
 import AuthRoute from "./routes/AuthRoute"
 import GuestRoute from "./routes/GuestRoute"
+import ReactPortal from "./pages/fundamental/ReactPortal"
+
+const JSX = React.lazy(() => import('./pages/fundamental/JSX'))
+const Props = React.lazy(() => import('./pages/fundamental/Props'))
+const ReactErrorBoundaryComponent = React.lazy(() => import('./pages/fundamental/ReactErrorBoundaryComponent'))
+
+
 function App() {
   const location = useLocation();
 
@@ -121,6 +128,23 @@ function App() {
                 </NavLink>
               </li>
               <li>
+                <NavLink
+                  to="/react-portal"
+                  className="block py-2 px-3 text-black bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                >
+                  React Portal
+                </NavLink>
+              </li>
+              <li>
+                <Link
+                  to="/error-boundaries"
+                  className="block py-2 px-3 text-black bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                >
+                  ReactErrorBoundaryComponent
+                </Link>
+
+              </li>
+              <li>
                 <Link
                   to="/login"
                   className="block py-2 px-3 text-black bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
@@ -135,19 +159,23 @@ function App() {
 
       <br />
       <main>
-        <Routes>
-          <Route path="jsx" element={<JSX />} />
-          <Route path="props" element={<Props />} />
-          <Route path="state" element={<State />} />
-          <Route path="event" element={<EventFunction />} />
-          <Route path="login" element={<GuestRoute><Login /></GuestRoute>} />
-          <Route path="user" element={<AuthRoute><User /></AuthRoute>}>
-            <Route path="information" element={<InformationUser />} />
-            <Route path="bank" element={<BankUser />} />
-            <Route path="member" element={<Member />} />
-          </Route>
-          <Route path="user/member/:memberId" element={<MemberDetail />} />
-        </Routes>
+        <React.Suspense fallback={<div>Loading ...</div>}>
+          <Routes>
+            <Route path="jsx" element={<JSX />} />
+            <Route path="props" element={<Props />} />
+            <Route path="state" element={<State />} />
+            <Route path="event" element={<EventFunction />} />
+            <Route path="login" element={<GuestRoute><Login /></GuestRoute>} />
+            <Route path="user" element={<AuthRoute><User /></AuthRoute>}>
+              <Route path="information" element={<InformationUser />} />
+              <Route path="bank" element={<BankUser />} />
+              <Route path="member" element={<Member />} />
+            </Route>
+            <Route path="user/member/:memberId" element={<MemberDetail />} />
+            <Route path="react-portal" element={<ReactPortal />} />
+            <Route path="error-boundaries" element={<ReactErrorBoundaryComponent />} />
+          </Routes>
+        </React.Suspense>
       </main>
 
       <br />
