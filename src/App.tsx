@@ -33,7 +33,8 @@ import ReactPortal from "./pages/fundamental/ReactPortal"
 const JSX = React.lazy(() => import('./pages/fundamental/JSX'))
 const Props = React.lazy(() => import('./pages/fundamental/Props'))
 const ReactErrorBoundaryComponent = React.lazy(() => import('./pages/fundamental/ReactErrorBoundaryComponent'))
-
+import Invoice from "./sampleApp/lien/pages/Invoice"
+import InvoiceDetail from "./sampleApp/lien/pages/InvoiceDetail"
 
 function App() {
   const location = useLocation();
@@ -146,6 +147,14 @@ function App() {
               </li>
               <li>
                 <Link
+                  to="/invoice"
+                  className="block py-2 px-3 text-black bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                >
+                  Invoice
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/login"
                   className="block py-2 px-3 text-black bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
                 >
@@ -174,6 +183,10 @@ function App() {
             <Route path="user/member/:memberId" element={<MemberDetail />} />
             <Route path="react-portal" element={<ReactPortal />} />
             <Route path="error-boundaries" element={<ReactErrorBoundaryComponent />} />
+            <Route path="invoice" element={<Invoice />}>
+              <Route index element={<div>Select an invoice</div>} />
+              <Route path=":invoiceId" element={<InvoiceDetail />} />
+            </Route>
           </Routes>
         </React.Suspense>
       </main>
@@ -209,7 +222,7 @@ function App() {
 
         <br />
         <GenerateBox />
-
+  
   
         <br />
         <RenderingPath />
