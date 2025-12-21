@@ -35,6 +35,7 @@ const Props = React.lazy(() => import('./pages/fundamental/Props'))
 const ReactErrorBoundaryComponent = React.lazy(() => import('./pages/fundamental/ReactErrorBoundaryComponent'))
 import Invoice from "./sampleApp/lien/pages/Invoice"
 import InvoiceDetail from "./sampleApp/lien/pages/InvoiceDetail"
+import JobBoard from "./sampleApp/lien/jobBoard/JobBoard"
 
 function App() {
   const location = useLocation();
@@ -237,6 +238,9 @@ function App() {
 
       <br />
       <PerformanceHook />
+
+      <br />
+      <JobBoard />
 
       <br />
       <br />
